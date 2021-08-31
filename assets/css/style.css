@@ -139,8 +139,7 @@ html {
   position: relative;
   margin-top: 46px; /*vì khi đặt position:fixed cho header thì header nó nổi lên trên và slider nó nằm dưới nên cần tạo khoảng cách phía trên đúng bằng chiều cao header để sau này khỏi bị che khuất*/
   padding-top: 50%; /*50% chiều ngang của chính nó*/
-  background: url(/front-end/w3_theband/assets/image/slider/slider1.jpg) top
-    center / cover no-repeat;
+  background: url(/assets/image/slider/slider1.jpg) top center / cover no-repeat;
 }
 #slider .text-content {
   position: absolute;
@@ -274,7 +273,7 @@ html {
   line-height: 1.4;
   padding-bottom: 0px;
 }
-/* .places-buy-ticket {
+.places-buy-ticket {
   text-decoration: none;
   background-color: #000;
   color: #fff;
@@ -283,7 +282,7 @@ html {
 .places-buy-ticket:hover {
   background-color: #ccc;
   color: #000;
-} */
+}
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
 figure.snip0016 {
   font-family: "Raleway", Arial, sans-serif;
