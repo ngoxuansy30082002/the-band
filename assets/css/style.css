@@ -146,7 +146,7 @@ html {
   position: relative;
   margin-top: 46px; /*vì khi đặt position:fixed cho header thì header nó nổi lên trên và slider nó nằm dưới nên cần tạo khoảng cách phía trên đúng bằng chiều cao header để sau này khỏi bị che khuất*/
   padding-top: 50%; /*50% chiều ngang của chính nó*/
-  background: url(/assets/image/slider/slider1.jpg) top center / cover no-repeat;
+  background: url(https://www.w3schools.com/w3images/chicago.jpg) top center / cover no-repeat;
 }
 #slider .text-content {
   position: absolute;
