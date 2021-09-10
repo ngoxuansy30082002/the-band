@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="v requirediewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="v requirediewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>THE BAND</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/image/images (1).jpg" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 
@@ -42,7 +48,9 @@
             <div class="search-button">
                 <i class="search-icon ti-search"></i>
             </div>        
-            
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
             <!-- end search icon -->
         </div>
 
@@ -65,15 +73,15 @@
                 <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                     <div class=" row member-list">
-                        <div class="col col-third text-center">
+                        <div class="s-col-full col mt-16 col-third text-center">
                             <p class="member-name">Name</p>
                             <img src="/assets/image/content/bandmember.jpg" alt="Name" class="member-img">
                         </div>
-                        <div class="col col-third text-center">
+                        <div class="s-col-full col mt-16 col-third text-center">
                             <p class="member-name">Name</p>
                             <img src="/assets/image/content/bandmember.jpg" alt="Name" class="member-img">
                         </div>
-                        <div class="col col-third text-center">
+                        <div class="s-col-full col mt-16 col-third text-center">
                             <p class="member-name">Name</p>
                             <img src="/assets/image/content/bandmember.jpg" alt="Name" class="member-img">
                         </div>
@@ -94,7 +102,7 @@
                     </ul>
                     
                     <div class=" row places-list">
-                        <div class="col col-third">
+                        <div class="mt-16 s-col-full col col-third">
                             <figure class="snip0016">
                                 <img src="./assets/image/content/newyork.jpg" alt="New York" class="places-img">
                                 <figcaption>
@@ -111,7 +119,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-third">
+                        <div class="mt-16 s-col-full col col-third">
                             <figure class="snip0016">
                                 <img src="./assets/image/content/paris.jpg" alt="Paris" class="places-img">
                                 <figcaption>
@@ -128,7 +136,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-third">
+                        <div class="mt-16 s-col-full col col-third">
                             <figure class="snip0016">
                                 <img src="./assets/image/content/sanfran.jpg" alt="San Francisco" class="places-img">
                                 <figcaption>
@@ -155,25 +163,25 @@
                 <p class="section-sub-heading">Fan? Drop a note!</p>
                 <div class="row">
                     <div class="padding"></div>
-                    <div class="col col-half contact-info">
+                    <div class=" s-col-full col col-half contact-info">
                         <p><i class="ti-location-pin"></i>Chicago,US</p>
-                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
-                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                        <p><i class="ti-mobile"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
+                        <p><i class="ti-email"></i>Email: <a href="mailto:ngoxuansy30082002@gmail.com">mail@mail.com</a></p>
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class=" s-col-full col col-half contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half form-field">
+                                <div class="s-col-full col col-half form-field">
                                     <input type="text" name="" required placeholder=" " class="form-input">
                                     <label for="Name" class="form-label">Name</label>
                                 </div>
-                                <div class="col col-half form-field">
+                                <div class="s-col-full col col-half form-field s-mt-8">
                                     <input type="email" name="" required placeholder=" " class="form-input">
                                     <label for="email" class="form-label">Email</label>
                                 </div>
                             </div>
                             <div class="row message-ipt">
-                                <div class="col col-full form-field">
+                                <div class=" col col-full form-field">
                                     <input type="text" name="" required placeholder=" " class="form-input">
                                     <label for="text" class="form-label">Message</label>
                                 </div>
@@ -272,5 +280,43 @@
             event.stopPropagation()            
         })
     </script>
+
+    <!-- responsive -->
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        // đóng mở mobile menu
+
+        mobileMenu.onclick = function(){
+            var isClose = header.clientHeight === headerHeight;
+            if(isClose){
+                header.style.height = 'auto';
+            }else{
+                header.style.height = null; 
+            }
+
+        }
+
+        // chọn menu thì nó tự đóng
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for(var i=0;i < menuItems.length;i++){
+            var menuItem = menuItems[i];
+           
+            menuItem.onclick = function(event){
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                // dòng trên là để kiểm tra xem cái thằng thẻ a kia có anh chị e liền kề và ace liền kề đó có class subnav hay k, nếu có trả về true cho biến và ngược lại
+               if(isParentMenu){
+                event.preventDefault();
+               }else{
+                header.style.height = null; 
+               }
+            }
+        
+        }
+    </script>
+
 </body>
 </html>

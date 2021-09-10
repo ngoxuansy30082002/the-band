@@ -1,0 +1,113 @@
+/* pc */
+
+@media screen and (min-width: 1024px) {
+}
+
+/* tablet */
+
+@media (min-width: 740px) and(max-width:1023px) {
+}
+/* moble - tab */
+@media (max-width: 1023px) {
+  .places-buy-ticket {
+    padding: 20px 30px;
+  }
+  .form-input {
+    height: 40px;
+  }
+  .social a {
+    font-size: 24px;
+    margin: 0 4px;
+  }
+  .copyright a {
+    padding: 14px 0;
+    display: inline-block;
+  }
+  #nav .subnav li a {
+    padding: 2px 12px;
+  }
+  .contact-info {
+    line-height: 2;
+    margin-bottom: 10px;
+  }
+}
+/* mobile */
+
+@media (max-width: 740px) {
+  #nav {
+    display: block;
+  }
+  #nav > li {
+    display: block;
+  }
+  #nav > li:first-child {
+    display: inline-block;
+  }
+  #nav li:hover {
+    transform: scale(1.05);
+  }
+  #nav li a {
+    padding: 1px 24px;
+  }
+  #nav .subnav {
+    position: initial;
+    /* bỏ position */
+    background-color: #333;
+  }
+
+  #nav .subnav li a {
+    color: #fff;
+    padding: 5px 41px;
+  }
+  #nav .subnav li:hover a {
+    color: #000;
+  }
+  #header {
+    overflow: hidden; /*mobile-responsive: thằng con nào vượt qua cái khu vực của header thì nó ẩn đi*/
+  }
+  #header .search-button {
+    display: none;
+  }
+  #header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    float: right; /*dịch em nó sang phải*/
+    padding: 0 21px;
+  }
+  #header .menu-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+  }
+  #header .mobile-menu-btn:hover {
+    background-color: #ccc;
+  }
+  #header .mobile-menu-btn:hover .menu-icon {
+    color: black;
+  }
+  .s-col-full {
+    width: 100%;
+  }
+  .s-mt-8 {
+    margin-top: 8px;
+  }
+  #content .member-img {
+    width: 60%;
+    border-radius: 10px;
+  }
+  .contact-form {
+    margin-top: 16px;
+  }
+  .send-button {
+    float: initial;
+    display: block;
+    width: 100%;
+    padding: 16px 16px;
+  }
+  .places-buy-ticket {
+    margin: -10px 11% 26px 10%;
+    width: 79%;
+  }
+}

@@ -47,6 +47,9 @@ html {
 .col-full {
   width: 100%;
 }
+.mt-16 {
+  margin-top: 16px;
+}
 /*class riêng*/
 
 #header {
@@ -56,7 +59,7 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1; /*cái này làm phần slider xong mới làm , giúp cho cái thanh header nó nổi lên trên cái ảnh*/
+  z-index: 100; /*cái này làm phần slider xong mới làm , giúp cho cái thanh header nó nổi lên trên cái ảnh*/
 }
 #nav,
 .subnav {
@@ -83,9 +86,9 @@ html {
   color: #fff;
   text-transform: uppercase; /*in hoa chữ*/
 }
-#nav > li:hover > a {
-  color: black;
-  background-color: #ccc;
+#nav li:hover a {
+  color: rgb(0, 0, 0);
+  /* background-color: #ccc; */
 }
 #nav .subnav li a {
   padding: 0 14px;
@@ -118,10 +121,14 @@ html {
   color: rgb(255, 0, 0);
   padding: 0 5px;
 }
+#header .mobile-menu-btn {
+  display: none;
+}
 #header .search-button {
   float: right; /*dịch em nó sang phải*/
   padding: 0 21px;
 }
+
 #header .search-icon {
   color: #fff;
   font-size: 20px;
@@ -187,22 +194,26 @@ html {
   opacity: 0.6; /*làm mờ chữ*/
 }
 #content .about-text {
+  font-family: "Allison", cursive;
+  font-size: 30px;
+  display: inline-block;
   margin-top: 25px;
   text-align: justify; /*căn đều 2 bên*/
   line-height: 1.4; /*tạo khoảng cách giữa các dòng (tiếng anh 1.4, tiếng việt 1.6)*/
 }
 
 #content .member-list {
-  margin: 48px 0 0 0;
+  margin: 32px 0 0 0;
 }
 
 #content .member-name {
+  margin-top: 15px;
   font-size: 15px;
   margin-bottom: 15px;
 }
 #content .member-img {
   width: 154px;
-  border-radius: 90px; /*tạo bo góc cho ảnh*/
+  border-radius: 50%; /*tạo bo góc cho ảnh*/
 }
 /*khi sử dụng float cho member-item thì ô thẻ cha (member-list) sẽ không thể ô được ô con nên cần phải sử dụng thẻ div đặt ngay cuối member-list để fix*/
 
@@ -243,7 +254,7 @@ html {
   margin-top: -2px;
 }
 .places-list {
-  margin-top: 32px;
+  margin-top: 16px;
   /* margin-bottom: 48px; */
   /*-8px này kết hợp với padding:8px ở places-item kia sẽ làm phẳng 2 bên (ý là khi padding 2 bên 3 item nằm trong list này thì 2 bên của list nó có 1 khoảng padding 8px , mình dùng cái này để triệt tiêu đi cái padding 2 bên đi padding giữa item với list nhưng vẫn giữ đc padding giữa các item với nhau)*/
 }
@@ -273,7 +284,7 @@ html {
   line-height: 1.4;
   padding-bottom: 0px;
 }
-.places-buy-ticket {
+/* .places-buy-ticket {
   text-decoration: none;
   background-color: #000;
   color: #fff;
@@ -282,7 +293,7 @@ html {
 .places-buy-ticket:hover {
   background-color: #ccc;
   color: #000;
-}
+} */
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
 figure.snip0016 {
   font-family: "Raleway", Arial, sans-serif;
@@ -484,6 +495,13 @@ figure.snip0016:hover figcaption::before {
   /*cái này là tìm những class có kí tự ti-*/
   width: 30px;
   display: inline-block;
+}
+.contact-info a {
+  color: #101aef;
+  opacity: 0.8;
+}
+.contact-info a:hover {
+  opacity: 1;
 }
 .contact-form {
   font-size: 15px;
