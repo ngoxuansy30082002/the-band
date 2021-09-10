@@ -146,7 +146,8 @@ html {
   position: relative;
   margin-top: 46px; /*vì khi đặt position:fixed cho header thì header nó nổi lên trên và slider nó nằm dưới nên cần tạo khoảng cách phía trên đúng bằng chiều cao header để sau này khỏi bị che khuất*/
   padding-top: 50%; /*50% chiều ngang của chính nó*/
-  background: url(https://www.w3schools.com/w3images/chicago.jpg) top center / cover no-repeat;
+  background: url(https://www.w3schools.com/w3images/chicago.jpg) top center /
+    cover no-repeat;
 }
 #slider .text-content {
   position: absolute;
@@ -558,6 +559,7 @@ figure.snip0016:hover figcaption::before {
   padding: 10px 16px;
   float: right;
   transition: background-color 0.2s;
+  -webkit-appearance: none;
 }
 .send-button:hover {
   background-color: #ccc;
@@ -676,6 +678,7 @@ figure.snip0016:hover figcaption::before {
   font-size: 15px;
   padding: 18px;
   border-radius: 4px;
+  -webkit-appearance: none;
 }
 .pay:hover {
   cursor: pointer;
